@@ -1,0 +1,1 @@
+A Sample mod that uses the Absolute Defeat Framework

@@ -1,0 +1,5 @@
+
+new entry "AD_ACTION_CAPTOR_SAMPLE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

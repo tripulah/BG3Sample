@@ -1,0 +1,24 @@
+local handlers = {
+    ["SampleScenario_5f97de42-a995-478d-abbf-8bec78bcb754"] = SampleScenario,
+}
+
+Ext.ModEvents.AbsoluteDefeat.DefeatScenarioStarted:Subscribe(function (e)
+    _P("[Sample][Events] DefeatScenarioStarted")
+    if handlers[e.scenarioId] ~= nil then
+        handlers[e.scenarioId].DefeatScenarioStarted(e)
+    end
+end)
+
+Ext.ModEvents.AbsoluteDefeat.DefeatScenarioActionStarted:Subscribe(function (e)
+    _P("[Sample][Events] DefeatScenarioActionStarted")
+    if handlers[e.scenarioId] ~= nil then
+        handlers[e.scenarioId].DefeatScenarioActionStarted(e)
+    end
+end)
+
+Ext.ModEvents.AbsoluteDefeat.DefeatScenarioActionCompleted:Subscribe(function (e)
+    _P("[Sample][Events] DefeatScenarioActionCompleted")
+    if handlers[e.scenarioId] ~= nil then
+        handlers[e.scenarioId].DefeatScenarioActionCompleted(e)
+    end
+end)

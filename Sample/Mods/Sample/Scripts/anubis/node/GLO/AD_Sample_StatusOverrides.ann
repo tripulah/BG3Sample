@@ -1,0 +1,30 @@
+game.actions.statusOverrides.AD_ACTION_CAPTOR_SAMPLE = Action
+{
+    function()
+        local source = GetStatusSource(me, "AD_ACTION_CAPTOR_SAMPLE")
+        if (source ~= nil and GetDistance2DTo(me, source) > 1.5) then
+            local moveResult = MoveTo(source, MovementSpeed.Run, true, false, 1.0, 1.5, false)
+            if moveResult ~= error.MovementError.None then
+                DebugText(me, "Debug: MoveTo failed or run out of resources")
+            end
+
+            SteerTo(source)
+        else
+            sleep(5.0)
+            WaitForInterrupt()
+            RemoveStatus(me, "AD_ACTION_CAPTOR_SAMPLE")
+        end
+    end,
+
+    OnLeave = function()
+        RemoveStatus(me, "AD_ACTION_CAPTOR_SAMPLE")
+    end,
+
+    Valid = function(node)
+        return
+            HasActiveStatus(me, "AD_ACTION_CAPTOR_SAMPLE") and
+            not me.IsInCombat
+    end
+    ,
+    Priority = 485556
+}
