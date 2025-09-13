@@ -1,4 +1,5 @@
 SampleScenario = {}
+-- this scenario is added to the random scenario pool when Situational is set to false.
 
 function SampleScenario.DefeatScenarioStarted(e)
     SampleScenario.StartSampleScript(e.captors, e.victims)

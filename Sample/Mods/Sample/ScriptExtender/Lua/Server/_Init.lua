@@ -17,6 +17,8 @@ end
 
 RequireFiles("Server/", {
     "SampleScenario",
+    "SampleSituationalScenario",
     "LoadConfig",
     "ModEvents",
+    "Events",
 })

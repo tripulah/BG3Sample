@@ -8,6 +8,12 @@
             "Id": "SampleScenario_5f97de42-a995-478d-abbf-8bec78bcb754",
             "Weight": 25,
             "Situational": false
+        },
+        {
+            "NameHandle": "h4b929278ga99cg4c95ga56fg75e6f778c78c",
+            "Id": "SampleForcedScenario_82e4f1ff-62b2-43f4-964b-8a7b56a43425",
+            "Weight": 0,
+            "Situational": true
         }
     ]
 }
