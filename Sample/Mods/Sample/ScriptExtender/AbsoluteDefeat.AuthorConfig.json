@@ -1,7 +1,6 @@
 {
     "FileVersion": 1,
     "ModGuid": "cddd272e-49c3-4ae7-9169-240095f598b2",
-    "CustomDownedStatusList": ["TEST_DOWNED"],
     "Scenarios": [
         {
             "NameHandle": "hc84fb4f6g34ecg4edcg9408gd7b1da25adb2",
