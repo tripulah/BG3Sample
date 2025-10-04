@@ -6,6 +6,7 @@
             "NameHandle": "hc84fb4f6g34ecg4edcg9408gd7b1da25adb2",
             "Id": "SampleScenario_5f97de42-a995-478d-abbf-8bec78bcb754",
             "Weight": 25,
+            "TimeOut": 360,
             "Situational": false
         },
         {

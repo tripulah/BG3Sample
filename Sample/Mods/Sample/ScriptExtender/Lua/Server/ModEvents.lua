@@ -23,3 +23,21 @@ Ext.ModEvents.AbsoluteDefeat.DefeatScenarioActionCompleted:Subscribe(function (e
         handlers[e.scenarioId].DefeatScenarioActionCompleted(e)
     end
 end)
+
+Ext.ModEvents.AbsoluteDefeat.DefeatScenarioActionCompleted:Subscribe(function (e)
+    _P("[Sample][Events] DefeatScenarioActionCompleted")
+    if handlers[e.scenarioId] ~= nil then
+        handlers[e.scenarioId].DefeatScenarioActionCompleted(e)
+    end
+end)
+
+Ext.ModEvents.AbsoluteDefeat.DefeatScenarioRequestEnd:Subscribe(function (e)
+    _P("[Sample][Events] DefeatScenarioRequestEnd")
+    if handlers[e.scenarioId] ~= nil then
+        handlers[e.scenarioId].DefeatScenarioRequestEnd(e)
+    end
+end)
+
+Ext.ModEvents.AbsoluteDefeat.DefeatScenarioCompleted:Subscribe(function (e)
+
+end)

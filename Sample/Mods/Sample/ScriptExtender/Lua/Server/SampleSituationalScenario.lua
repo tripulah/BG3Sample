@@ -30,4 +30,8 @@ function SampleSituationalScenario.CleanUpDefeat(defeatContext)
     Mods.AbsoluteDefeat.AD.CleanUpDefeat(defeatContext.combatGuid)
 end
 
+function SampleSituationalScenario.DefeatScenarioRequestEnd(defeatContext)
+    SampleScenario.CleanUpDefeat(defeatContext)
+end
+
 return SampleSituationalScenario

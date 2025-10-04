@@ -39,10 +39,14 @@ function SampleScenario.CleanUpDefeat(defeatContext)
     local captors = defeatContext.captors
 
     for _,captor in pairs(captors) do
-        Osi.RemoveStatus(captor, "AD_ACTION_CAPTOR_SAMPLE")
+        Osi.RemoveStatus(captor, "AD_ACTION_CAPTOR_SAMPLE") -- note that all "AD_ACTION" statuses are automatically removed when the framework cleans up a defeat scenario.
     end
 
     Mods.AbsoluteDefeat.AD.CleanUpDefeat(defeatContext.combatGuid)
+end
+
+function SampleScenario.DefeatScenarioRequestEnd(defeatContext)
+    SampleScenario.CleanUpDefeat(defeatContext)
 end
 
 return SampleScenario
